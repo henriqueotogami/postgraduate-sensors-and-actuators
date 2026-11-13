@@ -68,7 +68,7 @@ void loop() {
 
       Serial.println(F("Leitura de Cartao - Inicio do Cadastro"));
       
-      for(int index = 0; index < 5; ++index){
+      for(int index = 0; index < 6; ++index){
         int readLight = analogRead(PIN_LDR);
         if (readLight < 1000) {
           countTimeLowLight++;
@@ -82,7 +82,7 @@ void loop() {
         for (int index = 0; index < 5; ++index) {
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
-          digitalWrite(LED_BUILTIN, HIGH);
+          digitalWrite(LED_BUILTIN, LOW);
         }
         countTimeLowLight = 0;
         isCardRegistered = 1;
